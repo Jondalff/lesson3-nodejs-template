@@ -12,6 +12,8 @@ const sequelize = new Sequelize({
 
 const Chat = sequelize.define('chats', {
   message: Sequelize.TEXT,
+  nick: Sequelize.TEXT
+  room: Sequelize.TEXT
 }, {
   timestamps: true,
 });
@@ -25,6 +27,10 @@ Chat.prototype.toJSON = function toJSON() {
 
     // Message was added on the POST request
     message: this.message,
+	
+	nick: this.nick,
+	room: this.room,
+	
   };
 };
 
