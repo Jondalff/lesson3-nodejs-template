@@ -27,7 +27,6 @@ Chat.prototype.toJSON = function toJSON() {
 
     // Message was added on the POST request
     message: this.message,
-	
 	nick: this.nick,
 	room: this.room,
 	
